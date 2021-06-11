@@ -41,10 +41,10 @@ const formElem = document.querySelector('.login-form');
 
 const onFormSubmit = event => {
   event.preventDefault()
-  const formDate = [...new FormDate(formElem)]
+  const formData = [...new FormData(formElem)]
     .reduce((acc, [field, value]) => ({...acc, [field]: value}), {})
 
-  alert(JSON.stringify(formDate));
+  alert(JSON.stringify(formData));
 }
 
-formElem.addEventListener('submit', onFormSubmit)
+formElem.addEventListener('submit', onFormSubmit);
